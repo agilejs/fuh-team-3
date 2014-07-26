@@ -65,6 +65,10 @@ function MovieEditCtrl ($scope, $http, $location, moviesResponse) {
             $location.path('/movies/' + $scope.movie.id);
         });
     };
+
+    $scope.validate = function () {
+        $scope.valid = !(($scope.movie.year-1899 > 0) && ($scope.movie.year < 10000) );
+    }
 }
 
 MovieEditCtrl.resolve = {

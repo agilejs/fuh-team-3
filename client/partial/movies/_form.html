@@ -30,11 +30,12 @@
              name="year"
              class="input-block-level"
              autofocus
-             ng-model="movie.year">
+             ng-model="movie.year"
+             ng-change="validate()">
     </div>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions" ng-hide="valid">
     <button type="submit"
             class="btn btn-primary"
             ng-click="save(movie)">
