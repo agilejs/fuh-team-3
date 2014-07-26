@@ -10,6 +10,7 @@ function MoviesListCtrl ($scope, $location, moviesResponse) {
     'use strict';
     $scope.movies = moviesResponse.data;
     $scope.reverse = false;
+    $scope.predicate = 'title';
     $scope.add = function () {
         $location.path('/movies/new');
     };
