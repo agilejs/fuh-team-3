@@ -9,6 +9,7 @@ function WelcomeCtrl () {
 function MoviesListCtrl ($scope, $location, moviesResponse) {
     'use strict';
     $scope.movies = moviesResponse.data;
+    $scope.reverse = false;
     $scope.add = function () {
         $location.path('/movies/new');
     };
